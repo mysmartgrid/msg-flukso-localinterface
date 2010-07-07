@@ -78,8 +78,10 @@ end
 options = Optparser.parse(ARGV)
 $verbose = options.verbose
 
-# TODO: Discover Flukso.
-location=FluksoLocal::Location.new("192.168.1.102", 80);
+# TODO: Discover Flukso dynamically.
+discoveryMechanism=FluksoLocal::DiscoverStaticConfiguration.new("192.168.1.102", 80);
+location=discoveryMechanism.getFluksoLocation();
+puts "Using Flukso at location #{location}"
 
 # Now: Query the Flukso.
 query=FluksoLocal::Query.new(location)

@@ -10,6 +10,15 @@ module FluksoLocal
     end
   end
 
+  class DiscoverStaticConfiguration
+    def initialize(host, port)
+      @location=Location.new(host, port);
+    end
+    def getFluksoLocation
+      return @location
+    end
+  end
+
   class Location
     attr_reader :host, :port
     def initialize(host, port)
