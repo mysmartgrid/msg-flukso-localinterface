@@ -10,10 +10,10 @@ begin
     gem.email = "md@gonium.net"
     gem.homepage = "http://github.com/gonium/msg-flukso-localinterface"
     gem.authors = ["Mathias Dalheimer"]
-    gem.add_dependency "xml-simple", ">= 1.0.12"
+    #gem.add_dependency "xml-simple", ">= 1.0.12"
     gem.bindir='bin'
-    gem.executables=['msg-flukso-discover', 'msg-flukso-query']
-    gem.default_executable = 'msg-discover-flukso'
+    gem.executables=['msg-flukso-discover', 'msg-flukso-currentwatts']
+    gem.default_executable = 'msg-flukso-discover'
     gem.files = FileList["[A-Z]*", "{bin,lib,test}/**/*"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
