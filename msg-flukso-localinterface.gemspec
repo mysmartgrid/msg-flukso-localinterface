@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mathias Dalheimer"]
   s.date = %q{2010-07-07}
-  s.default_executable = %q{msg-discover-flukso}
+  s.default_executable = %q{msg-flukso-discover}
   s.description = %q{The mySmartGrid project provides means to manage your household energy consumption. This gem provides the runtime environment for the Chumby: it queries the mySmartGrid webservice and forwards that information to a Flash application running on the Chumby.}
   s.email = %q{md@gonium.net}
-  s.executables = ["msg-flukso-discover", "msg-flukso-query"]
+  s.executables = ["msg-flukso-discover", "msg-flukso-currentwatts"]
   s.extra_rdoc_files = [
     "README"
   ]
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
     "README",
      "Rakefile",
      "VERSION",
-     "bin/msg-flukso-currentwatts.rb",
+     "bin/msg-flukso-currentwatts",
      "bin/msg-flukso-discover",
      "lib/msg-flukso-localinterface.rb",
      "lib/msg-flukso-localinterface/discover.rb",
@@ -38,12 +38,9 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<xml-simple>, [">= 1.0.12"])
     else
-      s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
     end
   else
-    s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
   end
 end
 
