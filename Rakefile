@@ -10,7 +10,7 @@ begin
     gem.email = "md@gonium.net"
     gem.homepage = "http://github.com/gonium/msg-flukso-localinterface"
     gem.authors = ["Mathias Dalheimer"]
-    #gem.add_dependency "xml-simple", ">= 1.0.12"
+    gem.add_dependency "json", ">= 1.2.3"
     gem.bindir='bin'
     gem.executables=['msg-flukso-discover', 'msg-flukso-currentwatts']
     gem.default_executable = 'msg-flukso-discover'
